@@ -59,11 +59,7 @@ v = lengthdir_y(Speed, Direction)
 x += h
 y += v
 
-if place_meeting(x,y,oGrate) { if random(4) &gt; 1 { Direction += random_range(-10,10) } else { instance_destroy() } }
-Box = instance_place(x,y,oBox)
-if instance_exists(Box) { with (Box) { Health -= 1 } } 
-if place_meeting(x+hspeed,y+vspeed,oMetal) { instance_destroy()}
-if place_meeting(x,y,oPlayer) { with (oPlayer) Health -= 1 }
+if place_meeting(x,y,oSolid) { instance_destroy() }
 
 if Die = true { instance_destroy() }
 

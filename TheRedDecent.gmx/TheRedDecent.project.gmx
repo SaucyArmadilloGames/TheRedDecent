@@ -8,19 +8,36 @@
     <sound>sound\aGunShoot</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\sSkeletonGib4</sprite>
-    <sprite>sprites\sSkeletonGib3</sprite>
-    <sprite>sprites\sprite20</sprite>
-    <sprite>sprites\sSkeletonFalling</sprite>
-    <sprite>sprites\sGun</sprite>
-    <sprite>sprites\sPlayer</sprite>
-    <sprite>sprites\sprite5_MetalTile</sprite>
-    <sprite>sprites\sDoor</sprite>
-    <sprite>sprites\sprite16</sprite>
+    <sprites name="Enemies">
+      <sprite>sprites\sBug4</sprite>
+      <sprite>sprites\sBug1</sprite>
+      <sprite>sprites\sBug2</sprite>
+    </sprites>
+    <sprites name="Gibs">
+      <sprite>sprites\sWallGibs</sprite>
+      <sprite>sprites\sBugGib</sprite>
+    </sprites>
+    <sprites name="Solids">
+      <sprite>sprites\sWall2</sprite>
+      <sprite>sprites\sWall2_Long</sprite>
+      <sprite>sprites\sWall</sprite>
+    </sprites>
+    <sprites name="Player">
+      <sprite>sprites\sPlayerIdle</sprite>
+      <sprite>sprites\sPlayerWalking</sprite>
+      <sprite>sprites\sPlayer</sprite>
+      <sprite>sprites\sPlayerAirBorne</sprite>
+    </sprites>
+    <sprites name="Guns">
+      <sprite>sprites\sprite16</sprite>
+      <sprite>sprites\sGun</sprite>
+    </sprites>
+    <sprites name="Furnature / decor">
+      <sprite>sprites\sDoor</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
-    <background>background\background1</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -29,23 +46,26 @@
   </scripts>
   <objects name="objects">
     <object>objects\oPlayer</object>
-    <object>objects\oSkeleton</object>
     <objects name="Funature &amp; decor">
       <object>objects\oDoor</object>
     </objects>
     <objects name="Blocks">
       <object>objects\oSolid</object>
+      <object>objects\oRockDebris</object>
       <object>objects\oMetal</object>
     </objects>
-    <object>objects\oGun</object>
-    <object>objects\oLightingController</object>
-    <object>objects\oDj</object>
-    <object>objects\oBullet</object>
+    <objects name="Weapons">
+      <object>objects\oBullet</object>
+      <object>objects\oGun</object>
+    </objects>
+    <objects name="Misc">
+      <object>objects\oDj</object>
+      <object>objects\oLightingController</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rInit</room>
-    <room>rooms\room0</room>
-    <room>rooms\room2</room>
+    <room>rooms\room3</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
