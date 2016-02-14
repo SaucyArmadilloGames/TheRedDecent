@@ -6,6 +6,10 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\aGunShoot</sound>
+    <sound>sound\aSplat0</sound>
+    <sound>sound\aSplat1</sound>
+    <sound>sound\aSplat2</sound>
+    <sound>sound\aSplat3</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Enemies">
@@ -16,6 +20,7 @@
     <sprites name="Gibs">
       <sprite>sprites\sWallGibs</sprite>
       <sprite>sprites\sBugGib</sprite>
+      <sprite>sprites\sBugSplat</sprite>
     </sprites>
     <sprites name="Solids">
       <sprite>sprites\sWall2</sprite>
@@ -24,6 +29,7 @@
     </sprites>
     <sprites name="Player">
       <sprite>sprites\sPlayerIdle</sprite>
+      <sprite>sprites\sPlayerOutline</sprite>
       <sprite>sprites\sPlayerWalking</sprite>
       <sprite>sprites\sPlayer</sprite>
       <sprite>sprites\sPlayerAirBorne</sprite>
@@ -34,13 +40,28 @@
     </sprites>
     <sprites name="Furnature / decor">
       <sprite>sprites\sDoor</sprite>
+      <sprite>sprites\sLamp</sprite>
     </sprites>
+    <sprites name="Grates">
+      <sprite>sprites\sGrateRed</sprite>
+      <sprite>sprites\sGrateRed2</sprite>
+      <sprite>sprites\sGrateBlue</sprite>
+      <sprite>sprites\sGrateBlue2</sprite>
+      <sprite>sprites\sGrateGreen</sprite>
+      <sprite>sprites\sGrateGreen2</sprite>
+      <sprite>sprites\sGrateOrange</sprite>
+      <sprite>sprites\sGrateOrange2</sprite>
+      <sprite>sprites\sGratePurple</sprite>
+      <sprite>sprites\sGratePurple2</sprite>
+    </sprites>
+    <sprite>sprites\sPistol</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\ScPlaySplat.gml</script>
     <script>scripts\ScGravityAndCollision.gml</script>
     <script>scripts\ScCanSee.gml</script>
     <script>scripts\ScBugDie.gml</script>
@@ -69,6 +90,7 @@
     </objects>
     <objects name="Gibs">
       <object>objects\oBugGib</object>
+      <object>objects\oBugSplat</object>
     </objects>
   </objects>
   <rooms name="rooms">

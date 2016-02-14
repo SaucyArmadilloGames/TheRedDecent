@@ -1,6 +1,8 @@
 repeat (2) { instance_create(x,y,oBugGib) }
 
-//instance_create(x,y,oSplatMark)
+ScPlaySplat()
+
+instance_create(x,y,oBugSplat)
 
 instance_destroy()
 

@@ -36,6 +36,30 @@ Accuracy = 5
         </arguments>
       </action>
     </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>x = oPlayer.x +(sign(oPlayer.bhsp)* 9)
+y = oPlayer.y - 45
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -59,17 +83,17 @@ if image_angle &gt; 90 and image_angle &lt; 270 {
 image_yscale = -1 } else { 
 image_yscale = 1 }
 
-x = oPlayer.x +(sign(oPlayer.bhsp)* 9)
-y = oPlayer.y - 45
 image_angle = point_direction(mouse_x,mouse_y,x,y)
 
 //make the gun always on top (mirror y)
 
-if mouse_check_button(mb_left) {
-    
-    //figure out where to make the bullet
+//figure out where to make the bullet
     Bulx = x + lengthdir_x(-25,image_angle)
     Buly = y + lengthdir_y(-25,image_angle)
+
+if mouse_check_button(mb_left) {
+    
+    
     
     //muzzle flash
     
