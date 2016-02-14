@@ -43,6 +43,7 @@
   <scripts name="scripts">
     <script>scripts\ScGravityAndCollision.gml</script>
     <script>scripts\ScCanSee.gml</script>
+    <script>scripts\ScBugDie.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\oPlayer</object>
@@ -61,6 +62,13 @@
     <objects name="Misc">
       <object>objects\oDj</object>
       <object>objects\oLightingController</object>
+    </objects>
+    <objects name="Enemies">
+      <object>objects\oBugParent</object>
+      <object>objects\oBug</object>
+    </objects>
+    <objects name="Gibs">
+      <object>objects\oBugGib</object>
     </objects>
   </objects>
   <rooms name="rooms">

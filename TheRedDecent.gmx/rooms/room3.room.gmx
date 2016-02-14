@@ -16,8 +16,8 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1874</w>
-    <h>1096</h>
+    <w>987</w>
+    <h>600</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
     <showTiles>-1</showTiles>
@@ -26,9 +26,9 @@
     <showViews>0</showViews>
     <deleteUnderlyingObj>-1</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
-    <page>0</page>
-    <xoffset>-226</xoffset>
-    <yoffset>-136</yoffset>
+    <page>5</page>
+    <xoffset>2109</xoffset>
+    <yoffset>3391</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -317,6 +317,7 @@
     <instance objName="oRockDebris" x="896" y="640" name="inst_20D0E68E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oRockDebris" x="1152" y="1088" name="inst_CC8A23DA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oGun" x="320" y="512" name="inst_FD0CBCBA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oBug" x="413" y="604" name="inst_D2E39D4D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="" x="64" y="320" w="16" h="16" xo="0" yo="0" id="10000002" name="inst_8E0E55FD" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>image_speed = 0
 image_index = ceil(random( image_number ))
-Rot = 1 //ceil(random(4))
+Rot = ceil(random(4))
 if Rot = 1 {  } 
 if Rot = 2 { image_angle += 90 }
 if Rot = 3 { image_angle += 180 }
@@ -55,8 +55,10 @@ vsp = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if place_meeting(x,y+vsp,oSolid) { vsp = 0  } else { if vsp &lt; 15 { vsp += global.gravity }}
+            <string>//colliions yo
+if place_meeting(x,y+vsp,oSolid) { vsp = 0  } else { if vsp &lt; 15 { vsp += global.gravity * .5 }}
 
+//appiye speed
 y += vsp
 </string>
           </argument>

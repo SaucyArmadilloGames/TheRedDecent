@@ -49,7 +49,7 @@ TermVel = 15
 
 //init
 Jump = false
-global.gravity = .2
+
 </string>
           </argument>
         </arguments>
