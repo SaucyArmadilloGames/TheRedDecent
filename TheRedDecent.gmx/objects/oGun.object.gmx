@@ -136,6 +136,9 @@ if mouse_check_button(mb_left) {
             <string>draw_self()
 
 //if (global.debug) { draw_line(Bulx,Buly,x,y) }
+Color = make_colour_hsv(random(255), 255, 255) draw_set_color(Color)
+
+if mouse_check_button(mb_right) { Draw_Volt(Bulx,Buly,image_angle,30,50,Color) }
 </string>
           </argument>
         </arguments>

@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//Initialize vars
-jumpspeed = 9;
+jumpspeed = .001;
 movespeed = 8;
 hsp = 0;
 vsp = 0;
@@ -39,17 +39,19 @@ Timerr = 0
 bhsp = 1
 armed = false
 Health = 25
+
 //old stuff ^^
 
 //tweakables
 MoveSpeed = 4
-JumpSpeed = 9
+JumpSpeed = 7
 Accel = 1
 TermVel = 15
 
 //init
+timerr = 0
 Jump = false
-
+Grav = global.gravity
 </string>
           </argument>
         </arguments>
@@ -204,11 +206,8 @@ if (Right) and !place_meeting(x+hsp,y - 2,oSolid) {
 }
 
 //ground drag
-if place_meeting(x,y + 5,oSolid) and !(Left) and !(Right) { hsp = hsp * .7 }
+if place_meeting(x,y + 5,oSolid) and !(Left) and !(Right) { hsp = hsp * .55 }
     //make dust particles maybe??
-
-//gravity
-if !place_meeting(x,y+vsp,oSolid) and vsp &lt; TermVel { vsp += global.gravity }
 
 //horisontal collision
 if place_meeting(x+hsp,y - 2,oSolid) { hsp = 0 }
@@ -218,8 +217,23 @@ if place_meeting(x,y + vsp,oSolid) { vsp = 0 }
 
 //jumping
 
-if place_meeting(x-bhsp,y + 5,oSolid) and (Up) { vsp = -JumpSpeed }
+if place_meeting(x-bhsp,y + 5,oSolid) and (Up) { Jump = true vsp = -JumpSpeed }
+if (Jump) {
+    
+    timerr +=1
+    if keyboard_check(ord('W')) {
+        Grav = global.gravity
+        global.gravity = Grav * .5
+    }
+    
+    if timerr &gt; room_speed { timerr = 0 Jump = false }
+    
+}
 
+//gravity
+if !place_meeting(x,y+vsp,oSolid) and vsp &lt; TermVel { vsp += global.gravity } 
+
+global.gravity = Grav
 //apply speeds
 x += hsp
 y += vsp

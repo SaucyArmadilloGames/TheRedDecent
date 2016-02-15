@@ -61,6 +61,8 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\Draw_Volt.gml</script>
+    <script>scripts\Draw_Volt_new.gml</script>
     <script>scripts\ScPlaySplat.gml</script>
     <script>scripts\ScGravityAndCollision.gml</script>
     <script>scripts\ScCanSee.gml</script>
@@ -96,6 +98,7 @@
   <rooms name="rooms">
     <room>rooms\rInit</room>
     <room>rooms\room3</room>
+    <room>rooms\room2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
