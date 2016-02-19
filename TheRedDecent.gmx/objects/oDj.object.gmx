@@ -135,7 +135,11 @@ if (Tele) {
     Color = make_colour_hsv(random(25), 255, 255) draw_set_color(Color)
     CanTp = false
     } else { CanTp = true Color = make_colour_hsv(random_range(155,175), 255, 255) draw_set_color(Color) }
-    draw_line_width(oGun.Bulx,oGun.Buly,mouse_x,mouse_y - 32,random(5))
+    
+    
+    Draw_Volt_new(oGun.Bulx,oGun.Buly,mouse_x,mouse_y - 32,random(5),Color)
+    
+    
     //draw_circle(mouse_x,mouse_y - 37,37,true)
     image_blend = draw_get_colour()
     draw_sprite_ext(sPlayerOutline,0,mouse_x,mouse_y,oPlayer.image_xscale,1,0,Color,255)

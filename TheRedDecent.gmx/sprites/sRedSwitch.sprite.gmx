@@ -20,6 +20,7 @@
   <width>64</width>
   <height>64</height>
   <frames>
-    <frame index="0">images\sGrateRed_0.png</frame>
+    <frame index="0">images\sRedSwitch_0.png</frame>
+    <frame index="1">images\sRedSwitch_1.png</frame>
   </frames>
 </sprite>

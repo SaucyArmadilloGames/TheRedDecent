@@ -55,6 +55,7 @@
       <sprite>sprites\sGratePurple2</sprite>
     </sprites>
     <sprite>sprites\sPistol</sprite>
+    <sprite>sprites\sRedSwitch</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -66,7 +67,11 @@
     <script>scripts\ScPlaySplat.gml</script>
     <script>scripts\ScGravityAndCollision.gml</script>
     <script>scripts\ScCanSee.gml</script>
+    <script>scripts\ScCanSeePoint.gml</script>
     <script>scripts\ScBugDie.gml</script>
+    <script>scripts\ScOpen2.gml</script>
+    <script>scripts\ScOpen.gml</script>
+    <script>scripts\ScAssertRed.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\oPlayer</object>
@@ -93,6 +98,16 @@
     <objects name="Gibs">
       <object>objects\oBugGib</object>
       <object>objects\oBugSplat</object>
+    </objects>
+    <objects name="Systems">
+      <objects name="Switches">
+        <object>objects\oSwitch</object>
+        <object>objects\oRedSwitch</object>
+      </objects>
+      <objects name="Grates">
+        <object>objects\oGrate</object>
+        <object>objects\oGrateRed</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">

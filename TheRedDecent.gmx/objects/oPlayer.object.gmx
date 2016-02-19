@@ -189,7 +189,7 @@ if vsp != 0 { sprite_index = sPlayerAirBorne } else {
 if (Left) and !place_meeting(x+hsp,y - 2,oSolid) {
     
     if vsp != 0 {
-        if hsp &gt; -MoveSpeed { hsp -= Accel }
+        if hsp &gt; -MoveSpeed * 1.25{ hsp -= Accel }
     } else {
         hsp = -MoveSpeed
     }
@@ -199,7 +199,7 @@ if (Left) and !place_meeting(x+hsp,y - 2,oSolid) {
 if (Right) and !place_meeting(x+hsp,y - 2,oSolid) {
     
     if vsp != 0 {     
-        if hsp &lt; MoveSpeed { hsp += Accel }  
+        if hsp &lt; MoveSpeed * 1.25{ hsp += Accel }  
     } else {
         hsp = MoveSpeed
     }
@@ -234,9 +234,24 @@ if (Jump) {
 if !place_meeting(x,y+vsp,oSolid) and vsp &lt; TermVel { vsp += global.gravity } 
 
 global.gravity = Grav
+
 //apply speeds
 x += hsp
 y += vsp
+
+///Button Presser
+button = instance_place(x, y, oSwitch);
+if (button &amp;&amp; keyboard_check_pressed(ord('E')))
+{
+    switch (button.switchColor)
+    {
+        case 'red': ScAssertRed(); break;
+        //case 'green': ScAssertGreen(); break;
+        //case 'blue': ScAssertBlue(); break;
+        //case 'orange': ScAssertOrange(); break;
+        //case 'purple': ScAssertPurple(); break;
+    }
+}
 </string>
           </argument>
         </arguments>
