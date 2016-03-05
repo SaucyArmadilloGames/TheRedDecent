@@ -31,6 +31,7 @@ Tele = false
 
 //tweakables
 global.gravity = .3 //default = .2
+global.time = 1
 
 </string>
           </argument>
@@ -103,6 +104,68 @@ with (KillGib) { instance_destroy() }
 
 
  }
+ 
+if keyboard_check_pressed(ord('1')) {
+    global.time = 1
+}
+if keyboard_check_pressed(ord('2')) {
+    global.time = .5
+}
+if keyboard_check_pressed(ord('3')) {
+    global.time = .25
+}
+if keyboard_check_pressed(ord('4')) {
+  global.time = .1
+}
+if keyboard_check_pressed(ord('5')) {
+  global.time = .01
+}
+if keyboard_check_pressed(ord('6')) {
+  global.time = .001
+}
+if keyboard_check_pressed(ord('0')) {
+    global.time = 2
+}
+
+
+
+
+
+
+
+if mouse_check_button(mb_right) {
+    
+    if global.time &gt; 0 and global.time &lt;= 1 { global.time -= .1 }
+    
+} else {
+    
+    global.time += .1
+    
+}
+
+if global.time &gt; 1 { global.time = 1 }
+
+if global.time &lt; 0 { global.time = .01 }
+
+/*
+
+if mouse_wheel_down() and global.time != .9 {
+    global.time = global.time + .1
+}
+
+if mouse_wheel_up() and global.time != .1 {
+    global.time -= .1
+}
+*/
+/*
+if keyboard_check(ord('U')) and global.time != .99 {
+    global.time = global.time + .01
+}
+
+if keyboard_check(ord('I')) and global.time != .01 {
+    global.time -= .01
+}
+*/
 </string>
           </argument>
         </arguments>

@@ -30,7 +30,7 @@ image_index = ceil(random( image_number ))
 image_angle = random(360)
 direction = random(360)
 speed = 3
-
+orspeed = speed
 </string>
           </argument>
         </arguments>
@@ -53,9 +53,17 @@ speed = 3
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if place_meeting(x+hspeed,y+vspeed,oSolid) { move_bounce_all(false) speed = speed * .5 } else {
-vspeed += global.gravity
+            <string>ScTime()
+
+speed = orspeed
+
+if place_meeting(x+hspeed,y+vspeed,oSolid) { move_bounce_all(false) speed = speed * .5 } else {
+vspeed += global.gravity * Time
 }
+
+orspeed = speed 
+
+speed = orspeed * Time
 </string>
           </argument>
         </arguments>

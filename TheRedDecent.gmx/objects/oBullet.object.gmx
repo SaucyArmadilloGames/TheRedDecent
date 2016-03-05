@@ -51,13 +51,15 @@ Die = false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Speed = 1
+            <string>ScTime()
+
+//Speed = 1
 //Direction = random(360)
 
 h = lengthdir_x(Speed, Direction)
 v = lengthdir_y(Speed, Direction)
-x += h
-y += v
+x += h * Time
+y += v * Time
 
 if place_meeting(x,y,oSolid) { instance_destroy() }
 

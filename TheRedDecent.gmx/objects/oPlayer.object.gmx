@@ -47,11 +47,13 @@ MoveSpeed = 4
 JumpSpeed = 7
 Accel = 1
 TermVel = 15
+Range = 128
 
 //init
 timerr = 0
 Jump = false
 Grav = global.gravity
+Gravity = global.gravity
 </string>
           </argument>
         </arguments>
@@ -80,6 +82,17 @@ Grav = global.gravity
     Size = size
     draw_set_blend_mode(bm_subtract)
     surface_set_target(global.light)
+    draw_ellipse_color(x-Size/2-view_xview,y-Size/2-view_yview,x+Size/2-view_xview,y+Size/2-view_yview,c_white,c_black,false)
+    
+    surface_reset_target()
+    draw_set_blend_mode(bm_normal)
+}
+
+if instance_exists(oTime) {
+    
+    Size = Range * 3
+    draw_set_blend_mode(bm_subtract)
+    surface_set_target(global.Slime)
     draw_ellipse_color(x-Size/2-view_xview,y-Size/2-view_yview,x+Size/2-view_xview,y+Size/2-view_yview,c_white,c_black,false)
     
     surface_reset_target()
@@ -172,7 +185,9 @@ ScGravityAndCollision();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//define movement keys
+            <string>ScTime()
+
+//define movement keys
 Up = keyboard_check_pressed(ord('W'))
 Down = keyboard_check(ord('S'))
 Left = keyboard_check(ord('A'))
@@ -210,10 +225,10 @@ if place_meeting(x,y + 5,oSolid) and !(Left) and !(Right) { hsp = hsp * .55 }
     //make dust particles maybe??
 
 //horisontal collision
-if place_meeting(x+hsp,y - 2,oSolid) { hsp = 0 }
+if place_meeting(x + hsp * Time ,y - 2,oSolid) { hsp = 0 }
 
 //vertical collision
-if place_meeting(x,y + vsp,oSolid) { vsp = 0 }
+if place_meeting(x,y + vsp * Time,oSolid) { vsp = 0 }
 
 //jumping
 
@@ -222,22 +237,19 @@ if (Jump) {
     
     timerr +=1
     if keyboard_check(ord('W')) {
-        Grav = global.gravity
-        global.gravity = Grav * .5
+        Grav = global.gravity *.5
     }
     
     if timerr &gt; room_speed { timerr = 0 Jump = false }
     
-}
+} else { Grav = global.gravity }
 
 //gravity
-if !place_meeting(x,y+vsp,oSolid) and vsp &lt; TermVel { vsp += global.gravity } 
-
-global.gravity = Grav
+if !place_meeting(x,y+vsp,oSolid) and vsp &lt; TermVel { vsp += Grav * Time } 
 
 //apply speeds
-x += hsp
-y += vsp
+x += hsp * Time
+y += vsp * Time
 
 ///Button Presser
 button = instance_place(x, y, oSwitch);
@@ -284,7 +296,9 @@ draw_set_color(c_white)
 
 //if (global.debug) {draw_line(x,y,x,y+25)}
 
-if (global.debug) {draw_text(x,y -50,string(hsp))}
+if (global.debug) {draw_circle(x,y,Range,true)}
+
+
 </string>
           </argument>
         </arguments>

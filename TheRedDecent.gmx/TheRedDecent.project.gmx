@@ -72,6 +72,7 @@
     <script>scripts\ScOpen2.gml</script>
     <script>scripts\ScOpen.gml</script>
     <script>scripts\ScAssertRed.gml</script>
+    <script>scripts\ScTime.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\oPlayer</object>
@@ -90,6 +91,7 @@
     <objects name="Misc">
       <object>objects\oDj</object>
       <object>objects\oLightingController</object>
+      <object>objects\oTime</object>
     </objects>
     <objects name="Enemies">
       <object>objects\oBugParent</object>
