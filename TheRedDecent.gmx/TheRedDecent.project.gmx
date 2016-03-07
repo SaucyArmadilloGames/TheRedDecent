@@ -56,9 +56,17 @@
     </sprites>
     <sprite>sprites\sPistol</sprite>
     <sprite>sprites\sRedSwitch</sprite>
+    <sprites name="UI">
+      <sprites name="MainMenu">
+        <sprite>sprites\sSelectionRectangle</sprite>
+      </sprites>
+      <sprite>sprites\sBlacksolid</sprite>
+      <sprite>sprites\sOptionsPane</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\bgMainMenu</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -74,7 +82,13 @@
     <script>scripts\ScAssertRed.gml</script>
     <script>scripts\ScTime.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fontSubtext_small</font>
+    <font>fonts\fontSubtext</font>
+    <font>fonts\fontTitle</font>
+  </fonts>
   <objects name="objects">
+    <object>objects\oMainMenu</object>
     <object>objects\oPlayer</object>
     <objects name="Funature &amp; decor">
       <object>objects\oDoor</object>
@@ -111,9 +125,11 @@
         <object>objects\oGrateRed</object>
       </objects>
     </objects>
+    <object>objects\oOptionsPane</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rInit</room>
+    <room>rooms\rMenu</room>
     <room>rooms\room3</room>
     <room>rooms\room2</room>
   </rooms>

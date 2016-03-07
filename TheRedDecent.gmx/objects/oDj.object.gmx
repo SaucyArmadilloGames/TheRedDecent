@@ -32,7 +32,6 @@ Tele = false
 //tweakables
 global.gravity = .3 //default = .2
 global.time = 1
-
 </string>
           </argument>
         </arguments>
@@ -166,6 +165,11 @@ if keyboard_check(ord('I')) and global.time != .01 {
     global.time -= .01
 }
 */
+
+if(keyboard_check_pressed(vk_escape) &amp;&amp; room != rMenu)
+{
+    game_end();
+}
 </string>
           </argument>
         </arguments>
