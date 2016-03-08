@@ -10,6 +10,8 @@
     <sound>sound\aSplat1</sound>
     <sound>sound\aSplat2</sound>
     <sound>sound\aSplat3</sound>
+    <sound>sound\mMenu</sound>
+    <sound>sound\mSectionA</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Enemies">

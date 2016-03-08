@@ -32,6 +32,9 @@ Tele = false
 //tweakables
 global.gravity = .3 //default = .2
 global.time = 1
+
+//Audio
+audio_play_sound(mMenu, 1, true);
 </string>
           </argument>
         </arguments>
