@@ -53,12 +53,6 @@ optionsOpen = false;
           <argument>
             <kind>1</kind>
             <string>///Defined Controls
-
-//UI
-keyUp = ord('W');
-keyDown = ord('S');
-keyLeft = ord('A');
-keyRight = ord('D');
 </string>
           </argument>
         </arguments>
@@ -85,18 +79,20 @@ keyRight = ord('D');
 
 if(!optionsOpen)
 {
-    if(keyboard_check_pressed(keyUp))
+    if(keyboard_check_pressed(ord('W')) || keyboard_check_pressed(vk_up))
     {
         if(currentSelection != 0)
         {
             currentSelection--;
+            audio_play_sound(sSelectionChange, 1, false);
         }
     }
-    else if(keyboard_check_pressed(keyDown))
+    else if(keyboard_check_pressed(ord('S')) || keyboard_check_pressed(vk_down))
     {
         if(currentSelection != 3)
         {
             currentSelection++;
+            audio_play_sound(sSelectionChange, 1, false);
         }
     }
     if(keyboard_check_pressed(vk_enter))
@@ -109,7 +105,7 @@ if(!optionsOpen)
         }
         else if(currentSelection == 2)
         {
-                instance_create(400, 25, oOptionsPane);
+                instance_create(0, 0, oOptionsPane);
                 optionsOpen = true;
         }
         else if(currentSelection == 3)

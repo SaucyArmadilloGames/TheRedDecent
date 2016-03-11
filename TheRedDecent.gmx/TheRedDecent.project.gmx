@@ -5,13 +5,24 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\aGunShoot</sound>
-    <sound>sound\aSplat0</sound>
-    <sound>sound\aSplat1</sound>
-    <sound>sound\aSplat2</sound>
-    <sound>sound\aSplat3</sound>
-    <sound>sound\mMenu</sound>
-    <sound>sound\mSectionA</sound>
+    <sounds name="Player">
+      <sound>sound\aGunShoot</sound>
+      <sound>sound\sWarpPrime</sound>
+      <sound>sound\sWarpEnd</sound>
+    </sounds>
+    <sounds name="UI">
+      <sound>sound\sSelectionChange</sound>
+    </sounds>
+    <sounds name="Music">
+      <sound>sound\mMenu</sound>
+      <sound>sound\mSectionA</sound>
+    </sounds>
+    <sounds name="Enemies">
+      <sound>sound\aSplat0</sound>
+      <sound>sound\aSplat1</sound>
+      <sound>sound\aSplat2</sound>
+      <sound>sound\aSplat3</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprites name="Enemies">
@@ -64,6 +75,7 @@
       </sprites>
       <sprite>sprites\sBlacksolid</sprite>
       <sprite>sprites\sOptionsPane</sprite>
+      <sprite>sprites\sSlidernode</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">

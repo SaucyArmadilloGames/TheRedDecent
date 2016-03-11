@@ -94,7 +94,15 @@ if keyboard_check_pressed(ord('K')) { global.debug = !global.debug }
 
 if keyboard_check_pressed(ord('R')) { room_restart() }
 
-if keyboard_check_released(ord('T')) { if CanTp = true {oPlayer.vsp = 0 oPlayer.x = mouse_x oPlayer.y = mouse_y} Tele = false}
+if keyboard_check_released(ord('T'))
+{
+    if CanTp = true
+    {
+        oPlayer.vsp = 0 oPlayer.x = mouse_x oPlayer.y = mouse_y
+        audio_play_sound(sWarpEnd, 1, false);
+    }
+    Tele = false
+}
 
 if keyboard_check(vk_numpad1) { instance_create(mouse_x,mouse_y,oBugGib) }
 
@@ -169,9 +177,20 @@ if keyboard_check(ord('I')) and global.time != .01 {
 }
 */
 
-if(keyboard_check_pressed(vk_escape) &amp;&amp; room != rMenu)
+if(keyboard_check_pressed(vk_escape))
 {
-    game_end();
+    if(room == rMenu)
+    {
+        if(!oMainMenu.optionsOpen)
+        {
+            game_end();
+        }
+    }
+    else
+    {
+        game_end();
+    }
+
 }
 </string>
           </argument>
