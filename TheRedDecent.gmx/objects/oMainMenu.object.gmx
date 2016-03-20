@@ -160,6 +160,48 @@ if(!optionsOpen)
         <arguments>
           <argument>
             <kind>13</kind>
+            <string>179</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw Title Red
+draw_text(700, 310, "Red");
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>524</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_color</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>13</kind>
             <string>16777215</string>
           </argument>
         </arguments>
@@ -180,8 +222,8 @@ if(!optionsOpen)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw Title
-draw_text(700, 310, "Red Descent");
+            <string>///Draw Title Descent
+draw_text(850, 310, "Descent");
 </string>
           </argument>
         </arguments>
@@ -273,10 +315,11 @@ draw_text(1090, 695, "Saucy Armadillo Games");
           <argument>
             <kind>1</kind>
             <string>///Draw UI elements
-draw_text(20, 450, "New Game");
-draw_text(20, 500, "Load Game");
-draw_text(20, 550, "Options");
-draw_text(20, 600, "Exit");
+draw_text_colour(20, 450, "New Game", c_white, c_white, c_white, c_white, 0.5);
+draw_text_colour(20, 500, "Load Game", c_white, c_white, c_white, c_white, 0.5);
+draw_text_colour(20, 550, "Options", c_white, c_white, c_white, c_white, 0.5);
+draw_text_colour(20, 600, "Exit", c_white, c_white, c_white, c_white, 0.5);
+
 
 //Define selection position
 if(!animatingSelection)
@@ -285,15 +328,19 @@ if(!animatingSelection)
     {
         case 0:
             draw_sprite(sSelectionRectangle, 0, 0, 450);
+            draw_text_colour(20, 450, "New Game", c_white, c_white, c_white, c_white, 1);
         break;
         case 1:
-            draw_sprite(sSelectionRectangle, 0, 0, 500);
+            draw_sprite(sSelectionRectangle, 0, 0, 500); 
+            draw_text_colour(20, 500, "Load Game", c_white, c_white, c_white, c_white, 1);
         break;
         case 2:
             draw_sprite(sSelectionRectangle, 0, 0, 550);
+            draw_text_colour(20, 550, "Options", c_white, c_white, c_white, c_white, 1);
         break;
         case 3:
             draw_sprite(sSelectionRectangle, 0, 0, 600);
+            draw_text_colour(20, 600, "Exit", c_white, c_white, c_white, c_white, 1);
         break;
     }
 }
