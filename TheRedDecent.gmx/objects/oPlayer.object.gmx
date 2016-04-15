@@ -264,6 +264,12 @@ if (button &amp;&amp; keyboard_check_pressed(ord('E')))
         //case 'purple': ScAssertPurple(); break;
     }
 }
+
+//Audio
+if(keyboard_check_pressed(ord('T')))
+{
+    audio_play_sound(sWarpPrime, 1, false);
+}
 </string>
           </argument>
         </arguments>
