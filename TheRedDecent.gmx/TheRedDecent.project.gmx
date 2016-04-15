@@ -56,6 +56,7 @@
     </sprites>
     <sprite>sprites\sPistol</sprite>
     <sprite>sprites\sRedSwitch</sprite>
+    <sprite>sprites\spr_light</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -73,6 +74,8 @@
     <script>scripts\ScOpen.gml</script>
     <script>scripts\ScAssertRed.gml</script>
     <script>scripts\ScTime.gml</script>
+    <script>scripts\light_change_scale.gml</script>
+    <script>scripts\light_update.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\oPlayer</object>
@@ -81,6 +84,7 @@
     </objects>
     <objects name="Blocks">
       <object>objects\oSolid</object>
+      <object>objects\obj_wall</object>
       <object>objects\oRockDebris</object>
       <object>objects\oMetal</object>
     </objects>
@@ -111,6 +115,8 @@
         <object>objects\oGrateRed</object>
       </objects>
     </objects>
+    <object>objects\obj_light</object>
+    <object>objects\obj_control</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rInit</room>
