@@ -3,9 +3,9 @@
   <spriteName>sWall</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>110</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_wall</parentName>
+  <parentName>oSolid</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -33,8 +33,6 @@ if Rot = 2 { image_angle += 90 }
 if Rot = 3 { image_angle += 180 }
 if Rot = 4 { image_angle += 270 } 
 vsp = 0
-
-event_inherited();
 </string>
           </argument>
         </arguments>
@@ -64,8 +62,6 @@ if place_meeting(x,y+vsp,oSolid) { vsp = 0  } else { if vsp &lt; 15 { vsp += glo
 
 //appiye speed
 y += vsp * Time
-
-//depth = -((x + y) / 2)
 </string>
           </argument>
         </arguments>
