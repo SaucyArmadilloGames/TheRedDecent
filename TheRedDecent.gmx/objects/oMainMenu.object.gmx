@@ -32,6 +32,13 @@ currentSelection = 0;
 animatingSelection = false;
 
 optionsOpen = false;
+
+//Draw info
+titleOpacity = 0;
+
+//Transitions
+//When this is active, control is briefly removed.
+optionsTransition = false;
 </string>
           </argument>
         </arguments>
@@ -106,6 +113,7 @@ if(!optionsOpen)
         else if(currentSelection == 2)
         {
                 instance_create(0, 0, oOptionsPane);
+                optionsTransition = true;
                 optionsOpen = true;
         }
         else if(currentSelection == 3)
@@ -113,6 +121,12 @@ if(!optionsOpen)
                 game_end();
         }
     }
+}
+
+//Menu Draw Logic
+if(titleOpacity &lt;= 1)
+{
+    titleOpacity += 0.005;
 }
 </string>
           </argument>
@@ -181,7 +195,8 @@ if(!optionsOpen)
           <argument>
             <kind>1</kind>
             <string>///Draw Title Red
-draw_text(700, 310, "Red");
+draw_text_colour(700, 310, "Red", c_red, c_red, c_red, c_red, titleOpacity);
+
 </string>
           </argument>
         </arguments>
@@ -223,7 +238,8 @@ draw_text(700, 310, "Red");
           <argument>
             <kind>1</kind>
             <string>///Draw Title Descent
-draw_text(850, 310, "Descent");
+draw_text_colour(850, 310, "Descent", c_white, c_white, c_white, c_white, titleOpacity);
+
 </string>
           </argument>
         </arguments>
