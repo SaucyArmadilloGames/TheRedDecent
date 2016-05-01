@@ -20,6 +20,6 @@
   <width>8</width>
   <height>4</height>
   <frames>
-    <frame index="0">images\sprite16_0.png</frame>
+    <frame index="0">images\sBullet_0.png</frame>
   </frames>
 </sprite>

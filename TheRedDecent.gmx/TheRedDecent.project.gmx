@@ -41,7 +41,7 @@
       <sprite>sprites\sPlayerAirBorne</sprite>
     </sprites>
     <sprites name="Guns">
-      <sprite>sprites\sprite16</sprite>
+      <sprite>sprites\sBullet</sprite>
       <sprite>sprites\sGun</sprite>
     </sprites>
     <sprites name="Furnature / decor">
@@ -88,6 +88,7 @@
     <script>scripts\ScOpen.gml</script>
     <script>scripts\ScAssertRed.gml</script>
     <script>scripts\ScTime.gml</script>
+    <script>scripts\draw_line_fade.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fontSubtext</font>

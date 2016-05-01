@@ -107,7 +107,7 @@ if mouse_check_button(mb_left) {
         image_angle += random_range(-Accuracy,Accuracy)
         Timerr = 0
         Bullet = instance_create(Bulx,Buly,oBullet)
-        Bullet.Speed = speed + 12
+        Bullet.Speed = speed + 16
         Bullet.Direction = image_angle + 180
         Bullet.image_angle = image_angle
         
